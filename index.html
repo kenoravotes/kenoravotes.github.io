@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kenora Votes 2026</title>
+<meta name="description" content="Receipts, not rumours. A community-made, sourced guide to Kenora's 2026 municipal election: how to vote, all 13 candidates, every questionnaire, council records, the issues and Indigenous leadership in their own words.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<meta property="og:title" content="Kenora Votes 2026">
+<meta property="og:description" content="Receipts, not rumours. A community-made, sourced guide to Kenora's 2026 municipal election.">
+<style>
+
+/* Layout: a civic zine-wiki — loud condensed headlines, highlighter marks and rubber-stamp labels over a calm, readable reading column; sticky chip nav; every claim one tap from its source */
+:root{
+  --paper:#F6F6F2; --card:#FFFFFF; --ink:#141416; --soft:#4B4D52; --rule:#D9DAD4;
+  --orange:#E8590C; --orangeInk:#B23F00; --hi:#FFE94D; --hiInk:#141416; --stamp:#C2261B;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121314; --card:#1B1C1E; --ink:#EEEEE8; --soft:#ABADB2; --rule:#34363A;
+  --orange:#FF8A3D; --orangeInk:#FFA66B; --hi:#5C5200; --hiInk:#FFF6B0; --stamp:#FF6B5E; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#121314; --card:#1B1C1E; --ink:#EEEEE8; --soft:#ABADB2; --rule:#34363A;
+  --orange:#FF8A3D; --orangeInk:#FFA66B; --hi:#5C5200; --hiInk:#FFF6B0; --stamp:#FF6B5E; color-scheme:dark }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--orangeInk);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+mark{background:var(--hi);color:var(--hiInk);padding:0 .15em}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+
+/* hero */
+.hero{border-bottom:4px solid var(--ink)}
+.hero .wrap{padding-block:36px 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:0 0 6px}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(56px,11vw,128px);line-height:.86;margin:0;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 span{color:var(--orange)}
+.hero .tag{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.6vw,36px);line-height:1.1;margin:14px 0 0;text-transform:uppercase}
+.hero p.lede{max-width:58ch;margin:12px 0 0;font-size:18px}
+.countdown{border:3px solid var(--ink);background:var(--card);padding:14px 18px;text-align:center;min-width:170px}
+.countdown b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(40px,7vw,56px);line-height:.95;color:var(--orange);text-transform:uppercase}
+.countdown span{display:block;margin-top:4px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* nav */
+nav.chips{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+nav.chips .wrap{display:flex;gap:8px;align-items:center;overflow-x:auto;padding-block:10px;scrollbar-width:thin}
+nav.chips a{flex:none;font-family:var(--mono);font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);border:2px solid var(--ink);padding:5px 10px;border-radius:999px;background:var(--card)}
+nav.chips a.on,nav.chips a:hover{background:var(--ink);color:var(--paper)}
+nav.chips input{flex:none;width:150px;font:inherit;font-size:14px;padding:6px 10px;border:2px solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink)}
+
+main .wrap{display:flex;flex-direction:column;gap:64px;padding-block:40px 72px}
+section{scroll-margin-top:72px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.sh{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;border-top:4px solid var(--ink);padding-top:12px}
+.sh h2{font-family:var(--display);font-weight:900;font-size:clamp(34px,5.4vw,52px);line-height:.95;margin:0;text-transform:uppercase;text-wrap:balance}
+.sh .num{font-family:var(--mono);font-size:12px;color:var(--soft);margin-right:8px}
+.share{font-family:var(--mono);font-size:12px;font-weight:600;background:none;border:2px solid var(--ink);color:var(--ink);padding:5px 10px;cursor:pointer;min-height:36px}
+.share:hover{background:var(--hi);color:var(--hiInk)}
+h3{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.05;margin:10px 0 0;text-transform:uppercase}
+section p{margin:0;max-width:66ch;overflow-wrap:break-word}
+section a{overflow-wrap:anywhere}
+.small{font-size:14px;color:var(--soft)}
+.small a{color:var(--soft)}
+.stamp{display:inline-block;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--stamp);border:2px solid var(--stamp);padding:2px 8px;transform:rotate(-2deg)}
+ul.plain{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;max-width:66ch}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.facts div{background:var(--card);border:2px solid var(--ink);padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.facts b{font-family:var(--display);font-weight:900;font-size:clamp(26px,7vw,34px);line-height:1}
+.facts span{font-size:15px;color:var(--soft);overflow-wrap:anywhere}
+
+
+/* empty chair */
+.chair{background:#141416;color:#F6F6F2;padding:28px clamp(18px,4vw,36px);display:flex;flex-direction:column;gap:18px}
+.chair h3{color:#F6F6F2;margin:0}
+.chair p{color:#F6F6F2}
+.chair a{color:#FFE94D}
+.chair .small,.chair .small a{color:#D6D6CF}
+.tally{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tally div{border:2px solid #F6F6F2;padding:16px;display:flex;flex-direction:column;gap:8px}
+.tally b{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;text-transform:uppercase}
+.tally .x{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.1em;color:#141416;background:#FFE94D;align-self:flex-start;padding:2px 8px}
+.tally span{font-size:15px;line-height:1.45}
+
+.tbl{overflow-x:auto;border:2px solid var(--ink);background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:560px}
+th,td{text-align:left;vertical-align:top;padding:11px 13px;border-bottom:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--soft);background:var(--paper)}
+td.d{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.law{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.law article{background:var(--card);border:2px solid var(--ink);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.law .cite{font-family:var(--mono);font-size:12px;color:var(--orangeInk);font-weight:600}
+.law b{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;text-transform:uppercase}
+.law p{font-size:15.5px}
+.law .so{font-size:15px;border-top:1px dashed var(--rule);padding-top:8px}
+
+
+.q h3{font-size:22px}
+.lens{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.lens div{border:2px dashed var(--ink);padding:14px 16px}
+.lens b{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.lens p{font-size:15.5px;margin-top:6px}
+
+blockquote{margin:0;padding:6px 0 6px 18px;border-left:6px solid var(--orange);font-family:var(--display);font-weight:800;font-size:clamp(26px,4vw,38px);line-height:1.05;text-transform:uppercase;max-width:30ch}
+.who{font-family:var(--mono);font-size:12px;color:var(--soft)}
+.empty{color:var(--soft);font-style:italic}
+details{border:2px solid var(--ink);background:var(--card)}
+summary{cursor:pointer;font-family:var(--mono);font-weight:600;font-size:14px;padding:12px 14px;min-height:44px;box-sizing:border-box}
+details .tbl{border:0;border-top:2px solid var(--ink)}
+footer{border-top:4px solid var(--ink)}
+footer .wrap{padding-block:24px 40px;font-size:14px;color:var(--soft);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+[hidden]{display:none!important}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:13px;padding:10px 14px;z-index:20}
+@media (max-width:640px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.countdown{justify-self:start}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+.start{background:var(--card);border:3px solid var(--ink);padding:18px clamp(16px,3vw,24px);display:flex;flex-direction:column;gap:14px}
+.quick{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.quick li{display:flex;flex-direction:column;border-left:4px solid var(--orange);padding:2px 0 2px 10px}
+.quick b{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.quick span{font-weight:700;font-size:17px}
+.btn{display:inline-block;font-family:var(--mono);font-weight:600;font-size:14px;text-decoration:none;background:var(--ink);color:var(--paper);padding:11px 16px;min-height:44px;box-sizing:border-box;margin:0 8px 8px 0;border:2px solid var(--ink)}
+.btn:hover{background:var(--orange);border-color:var(--orange);color:#141416}
+.btn.ghost{background:transparent;color:var(--ink)}
+.ack{border:2px dashed var(--soft);padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:15.5px}
+.cands{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.cand{background:var(--card);border:2px solid var(--ink);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.cand h4{font-family:var(--display);font-weight:800;font-size:24px;line-height:1;margin:0;text-transform:uppercase}
+.cand p{font-size:15px;margin:0}
+.cand .pri{color:var(--soft)}
+.cand .lk{margin-top:auto;padding-top:6px;border-top:1px dashed var(--rule)}
+.ctag{align-self:flex-start;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 8px;border:2px solid var(--ink)}
+.ctag.inc{background:var(--hi);color:var(--hiInk);border-color:var(--hi)}
+.ctag.nv{border-color:var(--orange);color:var(--orangeInk)}
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.vs article{background:var(--card);border:2px solid var(--ink);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.vs .cite{font-family:var(--mono);font-size:12px;color:var(--orangeInk);font-weight:600}
+.vs b{font-family:var(--display);font-weight:800;font-size:22px;text-transform:uppercase;line-height:1}
+.vs p{font-size:15.5px}
+.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:3px solid var(--ink);display:flex;flex-direction:column;gap:10px;max-width:70ch}
+.tl li{position:relative;padding-left:14px}
+.tl li::before{content:"";position:absolute;left:-23px;top:8px;width:13px;height:13px;background:var(--orange);border:2px solid var(--ink);border-radius:50%}
+.tl .d{display:inline-block;min-width:88px;font-family:var(--mono);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+
+<header class="hero gut">
+  <div class="wrap">
+    <div>
+      <p class="kicker">The Public Record · City of Kenora · Treaty #3 territory</p>
+      <h1>Kenora <span>Votes</span> 2026</h1>
+      <p class="tag">Receipts, not rumours.</p>
+      <p class="lede">A community-made guide to the candidates, the issues, the records and the election. Every claim is one tap from its source.</p>
+    </div>
+    <div class="countdown"><b id="days">Ends 8 p.m.</b><span id="dayslabel">Monday, Oct 26</span></div>
+  </div>
+</header>
+
+<nav class="chips gut" aria-label="Sections">
+  <div class="wrap" id="toc">
+    <input id="q" type="search" placeholder="Search…" autocomplete="off" aria-label="Search this guide">
+    <a href="#start">Start here</a>
+    <a href="#vote">Vote</a>
+    <a href="#candidates">Candidates</a>
+    <a href="#qa">Q&amp;A</a>
+    <a href="#questions">Ask them</a>
+    <a href="#chair">Incumbent</a>
+    <a href="#together">Running together</a>
+    <a href="#record">On the record</a>
+    <a href="#voices">Voices</a>
+    <a href="#civics">Civics 101</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#coverage">News</a>
+    <a href="#support">Support</a>
+    <a href="#about">How we did this</a>
+  </div>
+</nav>
+
+<main class="gut">
+<div class="wrap">
+<p id="noresults" class="empty" hidden>Nothing matches that. Try a shorter word.</p>
+
+<section id="start">
+  <div class="sh"><h2>Start here</h2><button class="share" data-id="start" type="button">Copy link</button></div>
+  <div class="start">
+    <ul class="quick">
+      <li><b>Voting ends</b><span>8 p.m., Monday, Oct 26</span></li>
+      <li><b>How</b><span>Online or by phone, from anywhere</span></li>
+      <li><b>Council</b><span>6 seats, 13 candidates. Vote for up to six.</span></li>
+      <li><b>Mayor</b><span>Andrew Poirier, acclaimed</span></li>
+      <li><b>School board</b><span>3 KPDSB trustees for Kenora, 4 running</span></li>
+    </ul>
+    <p><a class="btn" href="https://www.kenora.ca/your-government/elections/voters/">Official voting instructions</a> <a class="btn ghost" href="https://kenora.simplyvoting.com/">Vote online</a></p>
+    <p class="small">Inside: all 13 candidates, every Miner &amp; News questionnaire, the forum video, council records, the big issues, Indigenous leadership in their own words, and the news coverage Facebook won't let you share.</p>
+  </div>
+  <h3>Why this exists</h3>
+  <p>Municipal elections throw off a lot of information in a short time. Candidates make promises, residents ask questions, reporters dig, people organize, and institutions issue statements. In Kenora this year it landed in newspapers, council documents, podcasts, Facebook threads and videos, and much of it is hard to find twice.</p>
+  <p>This year's race also turned into a conversation about reconciliation, homelessness, policing, spending and what we expect from the people we elect. Not everyone has the time to dig through all of that, or to know which parts are council's business and which belong to other governments. So a few of us collected it in one place.</p>
+  <p>We tried to hold ourselves to some simple rules. A complaint isn't a finding. Running together isn't proof of a voting deal. A controversial statement isn't automatically a broken law. We quote people's own words, link the original, and leave the judging to you.</p>
+  <p>We're also keeping it because elections end and posts disappear. Democracy mostly happens between elections, in council chambers, community meetings and the work of keeping track. This is part of the keeping track.</p>
+  <aside class="ack">
+    <p><b>Land acknowledgement</b></p>
+    <p>Kenora is situated within Treaty #3 territory, on the traditional lands and waters of the Anishinaabe Nation. We recognize the continued presence, governance, inherent rights and leadership of Anishinaabe peoples, alongside the contributions of Métis people and other Indigenous residents who call this region home.</p>
+    <p>The history of this municipality can't be separated from treaty relationships, colonization, residential schools, displacement or the continued work of Indigenous peoples to protect their lands, communities and futures.</p>
+  </aside>
+</section>
+
+<section id="vote">
+  <div class="sh"><h2><span class="num">01</span>How to vote</h2><button class="share" data-id="vote" type="button">Copy link</button></div>
+  <div class="facts">
+    <div><b>Ends 8 p.m.</b><span>Monday, Oct 26. Voting opened Oct 13.</span></div>
+    <div><b>Online</b><span><a href="https://kenora.simplyvoting.com/">kenora.simplyvoting.com</a></span></div>
+    <div><b>Phone</b><span><a href="tel:+18663464013">1-866-346-4013</a></span></div>
+    <div><b>Help</b><span><a href="tel:+18074708620">807-470-8620</a><br><a href="mailto:kenoravotes@kenora.ca">kenoravotes@kenora.ca</a></span></div>
+  </div>
+  <ul class="plain">
+    <li><b>Vote for up to six council candidates.</b> You don't have to use all six.</li>
+    <li><b>Need help in person?</b> Voter assistance is in City Hall Council Chambers, 1 Main Street South, using the front north entrance by the tracks. Hours: Mon–Fri, Oct 19–23, 8 a.m. to 4:30 p.m. · Sat–Sun, Oct 24–25, 9 a.m. to 2 p.m. · Monday, Oct 26, 8 a.m. to 8 p.m.</li>
+    <li><b>No Voter Information Letter?</b> Letters were mailed in early October to everyone on the voters' list. If you're not on the list, fill out the EL15 application to amend the voters' list (online or at City Hall), or call voter assistance.</li>
+    <li><b>Can't vote yourself?</b> You can appoint someone you trust as a proxy using Form 3.</li>
+  </ul>
+  <h3>School board trustees</h3>
+  <p>School boards cover the whole region, and each board's trustee seats are split among the communities it serves. On this ballot you're voting only for the trustees who represent the City of Kenora.</p>
+  <p><b>Keewatin-Patricia District School Board (public):</b> Kenora elects three trustees, and four people are running: Anita Cameron, David Cornish, Grant Erickson and Rory McMillan. Cameron and McMillan have profiles on the City's site.</p>
+  <p><b>Catholic and French-language boards:</b> Kenora's trustees on these boards were acclaimed, so there's no vote.</p>
+  <p>You vote for trustees on the board you support. If you're not sure which one, call the voter help line at <a href="tel:+18074708620">807-470-8620</a>.</p>
+  <p class="small"><a href="https://www.kenora.ca/your-government/elections/voters/">City voter page</a> · <a href="https://www.kenora.ca/your-government/elections/candidates/candidate-profiles/">Candidate and trustee profiles</a> · <a href="https://www.kenora.ca/news-and-notices/posts/kenora-residents-to-vote-for-councillors-and-public-school-board-trustees/">City notice on the 2026 vote</a> · New term: Nov 15, 2026 to Nov 14, 2030</p>
+</section>
+
+<section id="candidates">
+  <div class="sh"><h2><span class="num">02</span>Meet the candidates</h2><button class="share" data-id="candidates" type="button">Copy link</button></div>
+  <p>All 13, in the City's order. Backgrounds and priorities are summarized from each candidate's <a href="https://www.kenora.ca/your-government/elections/candidates/candidate-profiles/">City profile</a>, which candidates write themselves. "Miner" links go to the Miner &amp; News candidate profile.</p>
+  <div class="cands">
+    <article class="cand"><h4>Bob Bernie</h4><span class="ctag inc">Sitting councillor, elected 2022</span><p>Retired OPP community mobilization officer; Kenora resident 38+ years.</p><p class="pri"><b>Priorities:</b> No specific platform listed; says he's committed to helping the community reach its full potential.</p><p class="small lk"><span class="small">City profile only</span></p></article>
+    <article class="cand"><h4>Bryan Booth</h4><p>Lifelong Kenora resident.</p><p class="pri"><b>Priorities:</b> Safety through work with police and health providers; infrastructure; attracting developers and manufacturers; transparency.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-bryan-booth/article_a31d6aab-46a2-4a94-85fe-d823c31c2a38.html">Miner</a></p></article>
+    <article class="cand"><h4>Mort Goss</h4><span class="ctag inc">Sitting councillor, appointed June 2026</span><p>Business owner 38+ years; councillor 2014–2022.</p><p class="pri"><b>Priorities:</b> Seeking a fourth term, with “inclusive community betterment” as his test for decisions.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-mort-goss/article_b92693f9-88d7-4543-aa0d-f865be630204.html">Miner</a> · <a href="https://yourkenora.ca/goss-appointed-to-city-council-to-replace-barb-manson/">Appointment</a></p></article>
+    <article class="cand"><h4>Tyler Johnson</h4><span class="ctag nv">A New Vision for Kenora</span><p>Fourth-generation resident; lawyer.</p><p class="pri"><b>Priorities:</b> A clean, safe, prosperous city; downtown; taxpayer money for taxpayer priorities.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/voting-bloc-can-function-with-own-individual-ideas-member-says/article_b5c0141b-99b1-4026-bbd1-acbd6d40d4e6.html">Interview</a></p></article>
+    <article class="cand"><h4>Chris Jones</h4><p>Lifelong resident; insurance broker; former downtown business owner.</p><p class="pri"><b>Priorities:</b> Community safety and wellness; a safe, inviting downtown; new revenue; economic diversification.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-chris-jones/article_90f5927e-c1fd-433e-b791-5723b67824d3.html">Miner</a></p></article>
+    <article class="cand"><h4>Richard Kurtz</h4><p>Educator 30+ years, 28 in Nunavut; born in Kenora.</p><p class="pri"><b>Priorities:</b> Truth and reconciliation; affordable housing; a 24-hour mental health drop-in space.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-richard-kurtz/article_d37e8972-8fc8-41c1-a18f-d9269547ece3.html">Miner</a></p></article>
+    <article class="cand"><h4>Ron Malashewski</h4><p>Born in Kenora; former City of Calgary engineer; past Chamber president.</p><p class="pri"><b>Priorities:</b> Safety, crime, addiction, housing and economic development, using ideas from other cities.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-ron-malashewski/article_1289b292-3e32-41cd-92ac-efae8f79356e.html">Miner</a></p></article>
+    <article class="cand"><h4>Cecile Marcino</h4><p>Lifelong resident; 25 years on the KPDSB, eight as chair.</p><p class="pri"><b>Priorities:</b> Community safety; a stronger community; accountability and accessibility.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-cecile-marcino/article_814cd826-cf6f-451c-80c8-472315e6374e.html">Miner</a> · <a href="https://yourkenora.ca/first-nomination-received-in-kenora-for-municipal-election/">Nomination story</a></p></article>
+    <article class="cand"><h4>Chris McCaffrey</h4><span class="ctag nv">A New Vision for Kenora</span><p>Lifelong resident; local business owner.</p><p class="pri"><b>Priorities:</b> A safe, welcoming downtown; faster permits; provincial advocacy; accountable spending.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-chris-mccaffrey/article_202495f4-cda1-4021-a416-d44c9ba4ee5e.html">Miner</a></p></article>
+    <article class="cand"><h4>Rod McKay</h4><p>Forestry 47+ years; former councillor.</p><p class="pri"><b>Priorities:</b> Grow the economy and tax base; downtown safety and cleanliness; tourism; careful spending.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-rod-mckay/article_f165b8c6-923f-4dc5-962c-60286e9033b5.html">Miner</a></p></article>
+    <article class="cand"><h4>Michael O'Flaherty</h4><p>Engineering consultant; Kenora resident 27 years.</p><p class="pri"><b>Priorities:</b> Economic development; infrastructure; the cost of service delivery.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-michael-o-flaherty/article_9b90c248-9071-4028-bde6-857c40c68a97.html">Miner</a> · <a href="https://www.kenoramichael.ca/">Website</a></p></article>
+    <article class="cand"><h4>Dan Reynard</h4><p>Former mayor and councillor; former KMTS finance director.</p><p class="pri"><b>Priorities:</b> Accountability; community safety; economic development; fiscal responsibility; housing.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/reynard-returning-to-municipal-politics-files-to-run-for-councillor/article_77cab905-4a5c-4df4-8ba5-6d1b660d62d0.html">Nomination story</a></p></article>
+    <article class="cand"><h4>Karla Treadway</h4><span class="ctag nv">A New Vision for Kenora</span><p>Entrepreneur and marketing strategist; podcast host.</p><p class="pri"><b>Priorities:</b> Downtown safety and crime; harm reduction with accountability; economic growth.</p><p class="small lk"><a href="https://www.kenoraminerandnews.com/news/local-news/candidate-profile-karla-treadway/article_cd7cd562-6699-424c-8e92-ccd6627d4887.html">Miner</a> · <a href="https://www.karlajoytreadway.com/">Website</a></p></article>
+  </div>
+  <h3>Hear it from them</h3>
+  <ul class="plain">
+    <li><a href="https://www.facebook.com/share/v/1JVGTvo7E4/?mibextid=wwXIfr">All-candidates forum, Oct 6 (video)</a>. Each candidate's opening remarks, hosted by the Kenora &amp; District Chamber of Commerce at the Clarion Lakeside.</li>
+    <li><a href="https://www.facebook.com/share/g/1U6kWyMvgs/?mibextid=wwXIfr">Kenora Elections 2026 All Candidates Forum</a>, a Facebook group started by Lea-anne Carver where several candidates have answered residents' questions.</li>
+  </ul>
+</section>
+
+<section id="qa">
+  <div class="sh"><h2><span class="num">03</span>The Miner &amp; News Q&amp;A</h2><button class="share" data-id="qa" type="button">Copy link</button></div>
+  <p>The Kenora Miner &amp; News put the same questions to all 13 council candidates, some from the paper and some from readers, and printed the answers side by side. Same question, everyone's own words. Check each one to see who answered and who didn't.</p>
+  <p class="small">Declining the whole series is different from skipping one question. The paper notes that Bob Bernie chose not to take part in the series.</p>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Published</th><th scope="col">Question</th></tr></thead>
+    <tbody>
+      <tr><td class="d">Wk of Aug 31</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-1-why-are-you-running/article_54e44f1e-4886-4a0a-b6a1-5e5a8d66afaf.html">Why are you running?</a></td></tr>
+      <tr><td class="d">Wk of Sep 7</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-2-downtown-kenora/article_ceb51ccd-e0a3-40cd-b303-dfca9f281ca2.html">Downtown Kenora</a></td></tr>
+      <tr><td class="d">Sep 17</td><td><a href="https://www.pressreader.com/canada/kenora-daily-miner-and-news/20260917/281526527954321">Services and spending</a> <span class="small">· via PressReader</span></td></tr>
+      <tr><td class="d">Sep 24</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-4-water-bills-municipal-fees/article_3fe0dc1c-b54b-4196-b2cb-fd790afa5f2e.html">Water bills and municipal fees</a></td></tr>
+      <tr><td class="d">Late Sep</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-5-truth-reconciliation/article_498bcd45-d675-4055-84d0-0c4eafbafff8.html">Truth and reconciliation</a></td></tr>
+      <tr><td class="d">Late Sep</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-reader-question-1-would-you-expand-kenora-s-tax-base/article_4846cdf1-3fb8-4393-984e-dc5a71022ec3.html">Would you expand Kenora's tax base?</a> <span class="small">· reader question</span></td></tr>
+      <tr><td class="d">Oct 5</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-reader-question-2-the-portage-bay-bridge/article_4b52d0bc-20a6-4d2c-9106-ed55df6a0eca.html">The Portage Bay bridge</a> <span class="small">· reader question</span></td></tr>
+      <tr><td class="d">Oct 8</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-6-looking-back-on-the-past-four-years/article_634d914f-4b2f-467f-9e07-1f6834b049e5.html">Looking back on the past four years</a></td></tr>
+      <tr><td class="d">Oct 12</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-reader-question-3-daylight-time/article_24f63970-570e-47fe-9d5d-61c636613e0a.html">Daylight time</a> <span class="small">· reader question</span></td></tr>
+      <tr><td class="d">Oct 14</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-7-higher-levels-of-government/article_ad161194-7596-4557-b09e-e4f31ec01fe6.html">Higher levels of government</a></td></tr>
+      <tr><td class="d">Oct 15</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-8-kenora-s-animal-rescues/article_93bfdb83-5483-4748-9ab3-4f3354cffdc9.html">Kenora's animal rescues</a></td></tr>
+      <tr><td class="d">Oct 19</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-9-would-you-support-a-tiny-home-village/article_80635c34-28e2-4522-bb9d-837b5f865afd.html">Would you support a tiny home village?</a></td></tr>
+      <tr><td class="d">Oct 20</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/kenora-council-candidates-q-a-10-ai-data-centres-nuclear-waste-repository/article_14e98d88-ed36-4666-8224-14df26012e2a.html">AI data centres and the nuclear waste repository</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="questions" class="q">
+  <div class="sh"><h2><span class="num">04</span>Ask them this</h2><button class="share" data-id="questions" type="button">Copy link</button></div>
+  <p>At the door, at the rink, in the comments, and at council after the vote. These work whoever you support. A real answer has a number, a plan or a “no” in it.</p>
+  <h3>Campus of Care and health care</h3>
+  <ul class="plain">
+    <li>Do you support the Campus of Care and the All Nations Hospital? What would the City contribute, and what's up to the province?</li>
+    <li>How will the First Nations whose members travel to Kenora for care have a say in the planning?</li>
+  </ul>
+  <h3>Anicinabe Park and Treaty #3</h3>
+  <ul class="plain">
+    <li>Three First Nations are suing the City and Canada over <a href="https://www.nwonewswatch.com/local-news/land-claim-case-over-anicinabe-park-will-continue-court-rules-10981024">Anicinabe Park</a>, and a court ruled in July 2025 the case will continue. Negotiate or keep fighting in court? What's a fair outcome?</li>
+    <li>Treaty #3 Nations are governments, not stakeholders. How would you work with them government to government?</li>
+  </ul>
+  <h3>Community safety</h3>
+  <ul class="plain">
+    <li>When someone's in crisis downtown, who should respond: police, bylaw, outreach or a crisis team? What would you fund?</li>
+    <li>The City's <a href="https://fftimes.com/news/district-news/return-to-city-police-would-cost-kenora-roughly-double-report/">policing study</a> priced a Kenora police force at $13.2 to $15.9 million a year, roughly double the OPP. Still want one? Which taxes pay for it?</li>
+    <li>Mental health and wellness calls are rising while Criminal Code calls decline. Are more officers the answer to those calls?</li>
+    <li>The outgoing council backed <a href="https://www.kenoraminerandnews.com/news/crime/council-leans-into-community-safety-officer-plan-but-certain-question-marks-remain/article_629869c0-10a6-4ee6-8d1e-2376d8669465.html">hiring Community Safety Officers</a> but left the cost and mandate to the next council. What would they enforce, against whom, and at what cost?</li>
+    <li>Have you read Kenora's Community Safety and Well-Being Plan? What would you do with it?</li>
+  </ul>
+  <h3>Homelessness and housing</h3>
+  <ul class="plain">
+    <li>What's the City's job here, and what belongs to KDSB, the province and the federal government?</li>
+    <li>The Ontario Human Rights Commission <a href="https://www.ohrc.on.ca/en/news-center/report-and-recommendations-homelessness-kenora">reported on homelessness in Kenora</a> and <a href="https://www.ohrc.on.ca/en/news-center/letter-kenora-mayor-and-city-council-about-anti-loitering-law-being-considered">warned council against an anti-loitering bylaw</a>, which council voted down. Would you support bylaws aimed at people who are unhoused downtown?</li>
+    <li>What would you do on zoning and development to get more homes built?</li>
+  </ul>
+  <h3>Reconciliation</h3>
+  <ul class="plain">
+    <li>Do you accept the findings of the Truth and Reconciliation Commission?</li>
+    <li>Which TRC Calls to Action aimed at municipalities would you act on first? (See <a href="#civics">Civics 101</a>.)</li>
+    <li>What's your position on harm reduction, and what evidence is it based on?</li>
+  </ul>
+  <h3>Money and infrastructure</h3>
+  <ul class="plain">
+    <li>The budget is the new council's first big job. How would you pay for what you're promising, and what would you cut?</li>
+    <li>Water rates, roads like <a href="https://yourkenora.ca/kenora-city-council-revisits-options-for-coker-road/">Coker Road</a>, the Portage Bay bridge: what gets fixed first?</li>
+    <li>How do you grow year-round jobs and tourism, and protect rinks, trails, parks and programs?</li>
+  </ul>
+  <p class="small">The TRC, Anicinabe Park, drug policy, CSWB plan and inclusion questions were posted for every candidate in an online forum on Sept 16, after being emailed to Treadway, Johnson and McCaffrey. McCaffrey replied and said he accepts the TRC's findings. Johnson's answers arrived after the deadline through a third party. Treadway declined.</p>
+</section>
+
+<section id="chair">
+  <div class="sh"><h2><span class="num">05</span>The incumbent record</h2><button class="share" data-id="chair" type="button">Copy link</button></div>
+  <p>Two sitting councillors are running. Mort Goss rejoined council by appointment on June 16, 2026, after Barb Manson resigned, so he has served only the last months of this term. Bob Bernie was elected in 2022 and is the only candidate with a full term of record to judge. Here's the short version, with the receipts underneath.</p>
+  <div class="chair">
+    <h3>Showing up</h3>
+    <div class="tally">
+      <div><span class="x">NOT THERE</span><b>All-candidates forum</b><span>Oct 6. The Chamber says he “was not able to make the evening's events.” Everyone else's remarks are <a href="https://www.facebook.com/share/v/1JVGTvo7E4/?mibextid=wwXIfr">on video</a>.</span></div>
+      <div><span class="x">DECLINED</span><b>Miner &amp; News Q&amp;A</b><span>The paper notes he “has chosen not to participate” in its weekly Q&amp;A series. <a href="#qa">Everyone else's answers</a>.</span></div>
+    </div>
+    <p>Skipping debates breaks no rule, but it leaves voters to judge him on paper. In January 2026 he told council he'd “spread the accountability dust around” over the closed bail bed program. Voters have questions too.</p>
+    <p class="small">Sources: <a href="https://kenorachamber.com/2026/10/07/kenora-chamber-hosts-2026-all-candidates-forum/">Chamber forum recap</a> · <a href="https://www.kenoraminerandnews.com/opinion/column/the-new-guy-get-out-and-vote/article_37c59ead-b6f2-4520-b86f-c568e1ef0138.html">Mark LaBelle, forum moderator</a> · <a href="https://www.kenoraminerandnews.com/news/local-news/i-m-going-to-spread-the-accountability-dust-around-bernie-pledges-to-investigate-closure-of/article_cae95007-b122-4428-bbd8-ee37d52eaf42.html">Bail bed story</a> · Q&amp;A editor's notes</p>
+  </div>
+  <div class="law">
+    <article><span class="cite">Anicinabe Park, 2024–25</span><b>“Grifters, pure and simple”</b><p>On June 25, 2024, a 57-year-old man died in an officer-involved shooting at Anicinabe Park, and the Special Investigations Unit opened an investigation. At council on July 16, Bernie read a statement saying he spoke for himself, not the OPP or the City. He called much of the public discussion “subjective claptrap” and said it came from “the media, politicians and community leaders or those who call themselves community leaders, who are in my mind, nothing more than grifters, pure and simple, whose livelihood depends on perpetuating the victim narrative.” He ended that passage with “Shame on all of you!”</p><p>A resident complained that the remarks breached council's code of conduct. Weighing freedom of political expression, the Integrity Commissioner <a href="https://pub-kenora.escribemeetings.com/filestream.ashx?DocumentId=3189">found no violation</a>. His words are transcribed from the meeting recording in the report.</p><p class="so">His response to being cleared, <a href="https://yourkenora.ca/bernie-cleared-by-integrity-commissioner-again/">at council</a>: “Hurt feelings don't matter. They certainly don't matter to me.”</p></article>
+    <article><span class="cite">Homelessness, January 2025</span><b>“People choose to be in Kenora”</b><p>At a Jan 14, 2025 committee of the whole meeting, he told KDSB CAO Henry Wall he believes homelessness is “a choice,” <a href="https://pni-etear.navigahub.com/ETear/20250130/KEPRINT2025-01-304AS.pdf">the Miner &amp; News reported</a>. His words: “People choose to be in Kenora, they choose to couch surf, they choose to be at the shelter, they choose to be in encampments.” He also suggested more housing be built in First Nation communities.</p><p class="so">The evidence: KDSB's October 2024 count, <a href="https://pni-etear.navigahub.com/ETear/20250130/KEPRINT2025-01-304AS.pdf">reported in the same story</a>, found 325 people experiencing homelessness in Kenora, nearly triple 2021. Of 249 surveyed, 163 said they want housing, and low income was the top barrier. Across the wider district, <a href="https://kdsb.on.ca/kdsb-releases-2024-point-in-time-count-enumeration-on-homelessness/">KDSB counted 500 people</a>.</p></article>
+    <article><span class="cite">Policing, 2025–26</span><b>The big idea, priced</b><p>He moved a <a href="https://pub-kenora.escribemeetings.com/filestream.ashx?DocumentId=2907">study budgeted at about $95,000</a> on bringing back a city police force. It found a Kenora force would cost <a href="https://fftimes.com/news/district-news/return-to-city-police-would-cost-kenora-roughly-double-report/">roughly double the OPP</a>. He then proposed <a href="https://www.kenoraminerandnews.com/news/crime/council-leans-into-community-safety-officer-plan-but-certain-question-marks-remain/article_629869c0-10a6-4ee6-8d1e-2376d8669465.html">City-hired Community Safety Officers</a> for downtown, with costs left to the next council.</p></article>
+  </div>
+  <p class="small">The other complaint against him this term alleged a conflict of interest over ice time for the Kenora Islanders. He denied it, and the Integrity Commissioner <a href="https://pub-kenora.escribemeetings.com/filestream.ashx?DocumentId=1929">found it unfounded</a> in March 2025. Neither complaint ended in a finding of misconduct.</p>
+  <details>
+    <summary>Full record this term (8 items)</summary>
+    <div class="tbl"><table>
+    <thead><tr><th scope="col">Date</th><th scope="col">Source</th><th scope="col">Record</th></tr></thead>
+    <tbody>
+      <tr><td class="d">Jan 30, 2025</td><td>Kenora Miner &amp; News</td><td><a href="https://pni-etear.navigahub.com/ETear/20250130/KEPRINT2025-01-304AS.pdf">“Devastating results”: homelessness rates in Kenora have nearly tripled over the last three years</a>. Includes an exchange between Bernie and Kenora District Services Board CAO Henry Wall. Print edition PDF.</td></tr>
+      <tr><td class="d">Mar 6, 2025</td><td>City of Kenora</td><td><a href="https://pub-kenora.escribemeetings.com/filestream.ashx?DocumentId=1929">Integrity Commissioner report, file 3-2024</a>. Code of conduct and conflict of interest complaint. No violation found. Council <a href="https://pub-kenora.escribemeetings.com/FileStream.ashx?DocumentId=2636">received it Mar 18</a> and took no further action. <a href="https://acadiabroadcasting.ca/council-questions-complaint-process/">Acadia Broadcasting coverage</a>.</td></tr>
+      <tr><td class="d">May 2025</td><td>City of Kenora</td><td><a href="https://pub-kenora.escribemeetings.com/filestream.ashx?DocumentId=2907">His motion for a municipal policing study</a>, about $95,000 plus HST from contingency reserves.</td></tr>
+      <tr><td class="d">Aug 8, 2025</td><td>City of Kenora</td><td><a href="https://pub-kenora.escribemeetings.com/filestream.ashx?DocumentId=3189">Integrity Commissioner report, file 2-2024</a>, on his comments after a June 2024 shooting at Anicinabe Park. No violation found. Your Kenora <a href="https://yourkenora.ca/bernie-cleared-by-integrity-commissioner-again/">reported</a> the investigation cost $7,579.</td></tr>
+      <tr><td class="d">Jan 13, 2026</td><td>Kenora Miner &amp; News</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/i-m-going-to-spread-the-accountability-dust-around-bernie-pledges-to-investigate-closure-of/article_cae95007-b122-4428-bbd8-ee37d52eaf42.html">“I'm going to spread the accountability dust around”: Bernie pledges to investigate closure of bail bed program</a>. He called the bail residency program, empty since Ne-Chee Friendship Centre stopped operating it in June 2025, “a very vital piece regarding community safety.” KDSB told council the Attorney General's ministry is working with Grand Council Treaty #3 to reopen it.</td></tr>
+      <tr><td class="d">Feb 17, 2026</td><td>TBnewswatch via Fort Frances Times</td><td><a href="https://fftimes.com/news/district-news/return-to-city-police-would-cost-kenora-roughly-double-report/">Return to city police would cost Kenora roughly double</a>. The study he pushed for estimates $13.2 to $15.9 million a year, against $7.4 million paid to the OPP in 2024.</td></tr>
+      <tr><td class="d">Apr 16, 2026</td><td>Kenora Miner &amp; News (Bronson Carver)</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/provincial-government-kenora-rainy-river-ndp-respond-to-bernie-s-criticism/article_c4436355-ff66-4b62-9481-b3f44e5e7459.html">Provincial government, Kenora-Rainy River NDP respond to Bernie's criticism</a>. At council on Apr 14 he called for Attorney General Doug Downey to resign over a reported 2,000-case backlog at the Kenora courthouse. The ministry called his claim that it “abandoned” Kenora “simply untrue,” and said the bail bed program wasn't closed: Ne-Chee withdrew as operator. The local NDP agreed the backlog is a crisis.</td></tr>
+      <tr><td class="d">Apr 28, 2026</td><td>Kenora Miner &amp; News</td><td><a href="https://www.kenoraminerandnews.com/news/crime/council-leans-into-community-safety-officer-plan-but-certain-question-marks-remain/article_629869c0-10a6-4ee6-8d1e-2376d8669465.html">Council leans into community safety officer plan, but certain question marks remain</a>. With a city police force off the table for now, he proposed City-hired Community Safety Officers with “legislative authority” for the downtown core. All of council supported the idea, but costs, timelines and details were left for the next council.</td></tr>
+    </tbody>
+  </table></div>
+  </details>
+</section>
+
+<section id="together">
+  <div class="sh"><h2><span class="num">06</span>Running together</h2><button class="share" data-id="together" type="button">Copy link</button></div>
+  <p>Kenora council races usually run on individual names. This year Tyler Johnson, Chris McCaffrey and Karla Treadway are campaigning together as <a href="https://www.facebook.com/profile.php?id=61594110958891">A New Vision for Kenora</a>, which the Miner &amp; News calls a <a href="https://www.kenoraminerandnews.com/news/local-news/voting-bloc-can-function-with-own-individual-ideas-member-says/article_b5c0141b-99b1-4026-bbd1-acbd6d40d4e6.html">voting bloc</a>.</p>
+  <p><mark>Do the math.</mark> Council has seven votes, the mayor plus six councillors. Four carries a motion. A bloc of three needs just one more.</p>
+  <p>On Sept 6, a voter asked Treadway on Facebook who else shares her vision. She answered: “Tyler Johnson, Chris McCaffrey and Bob Bernie — check out @anewvisionforkenora on fb.” That's her naming Bernie, in her words. It doesn't prove he joined the group or agreed to vote with them.</p>
+  <p class="small">Source: Treadway, K., public Facebook comment, Sept 6, 2026. Screenshot preserved Oct 4, 2026.</p>
+  <h3>Same phrase, weeks apart</h3>
+  <div class="vs">
+    <article><span class="cite">July 27, 2026 · Podcast</span><b>Karla Treadway</b><p>Episode of The Sovereign Sphere: <a href="https://www.karlajoytreadway.com/podcasts/the-sovereign-sphere-with-karla-treadway/episodes/2149235230">“Canada's Suicidal Empathy: The Paradox That's Killing a Nation.”</a> Guest: Phillip Millar.</p></article>
+    <article><span class="cite">Aug 19, 2026 · Letter to the editor</span><b>Bob Bernie</b><p><a href="https://www.kenoraminerandnews.com/opinion/letters/letter-to-the-editor-suicidal-empathy-is-destroying-our-community/article_bf25ef0e-711d-45da-9bf7-045331800031.html">“Suicidal empathy is destroying our community.”</a> “Suicidal empathy has replaced rational thought and in fact reality in our community… Everyone is not a victim. The ‘victimhood industry’ is excusing bad behaviour in our community.” It names harm reduction, safe injection sites, needle exchanges and low-barrier shelters as part of the problem.</p></article>
+  </div>
+  <p><mark>Where the phrase comes from.</mark> “Suicidal empathy” is the title of a 2026 bestseller by Gad Saad, a Canadian marketing professor. It isn't a recognized psychological diagnosis or research finding. Wikipedia calls it a “purported phenomenon,” and writer Cathy Young has called it “a right-wing buzzword.” In Bernie's letter, it's used to argue against harm reduction: the services that keep people alive long enough to reach treatment.</p>
+  <p>On Sept 17, answering the Miner &amp; News <a href="https://www.pressreader.com/canada/kenora-daily-miner-and-news/20260917/281526527954321">Q&amp;A on services and spending</a>, Treadway wrote: “I'd fund and accelerate the Community Safety Officer model that Bob Bernie has already been pushing council to consider.”</p>
+  <p>Shared language isn't proof of a deal, and we're not claiming one. It's worth knowing where the ideas in this election come from.</p>
+  <p class="small"><a href="https://en.wikipedia.org/wiki/Suicidal_empathy">Suicidal empathy (Wikipedia)</a> · <a href="https://www.kenoraminerandnews.com/opinion/letters/letter-to-the-editor-suicidal-empathy-is-destroying-our-community/article_bf25ef0e-711d-45da-9bf7-045331800031.html">Bernie, B. (2026, Aug 19). Suicidal empathy is destroying our community [Letter to the editor]. Kenora Miner &amp; News.</a></p>
+</section>
+
+<section id="record">
+  <div class="sh"><h2><span class="num">07</span>On the record</h2><button class="share" data-id="record" type="button">Copy link</button></div>
+  <p>Karla Treadway hosts a podcast called <a href="https://www.karlajoytreadway.com/podcasts/the-sovereign-sphere-with-karla-treadway">The Sovereign Sphere</a>, which describes itself as “not entertainment” but “reprogramming.” These episodes came up in Kenora's campaign. Chapter titles are the show's wording. Guests are named, because a host isn't automatically responsible for every word a guest says. <mark>Listen before you quote.</mark></p>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Date</th><th scope="col">Episode</th><th scope="col">What to listen for</th></tr></thead>
+    <tbody>
+      <tr><td class="d">Dec 10, 2025</td><td><b>The Truth About Truth and Reconciliation</b></td><td>APTN reports an episode on the 2025 documentary <i>Making a Killing</i>, which called the potential unmarked graves identified by Tk'emlúps te Secwépemc part of a “billion dollar scam.” Confirm who's speaking before you repeat it.</td></tr>
+      <tr><td class="d">Jun 9, 2026</td><td><b>Brave New Normal, Ep. 130</b><br><span class="small">Treadway as guest</span></td><td>Titled “Indian Chiefs and Liberal Corruption.” NWOnewswatch reports she said Kenora is “surrounded by some of Canada's most dangerous reserves.” She later said a “skid row” remark meant Kenora, not a First Nation. On the Brave New Normal Substack.</td></tr>
+      <tr><td class="d">Jul 27, 2026</td><td><a href="https://www.karlajoytreadway.com/podcasts/the-sovereign-sphere-with-karla-treadway/episodes/2149235230">Ep. 227, Canada's Suicidal Empathy</a><br><span class="small">Guest Phillip Millar</span></td><td>Where the “suicidal empathy” framing first shows up in this race. The potential unmarked graves at Tk'emlúps te Secwépemc and survivors' “oral tradition” as evidence (8:37), land acknowledgments as “virtue signaling or admission of guilt” (27:16), her plans to run for local office (51:31).</td></tr>
+      <tr><td class="d">Aug 17, 2026</td><td><b>Ep. 234, CBC Spent $5,000,000 to Prank a Professor</b><br><span class="small">Guest Frances Widdowson</span></td><td>Chapters include “What is ‘Residential School Denialism’?”, “False memories and compensation claims,” “Assimilation vs. genocide” and “The truth about the ‘215 graves.’” Most discussed: about 30:00–31:30. No longer listed on her website as of Oct 20; try her <a href="https://www.youtube.com/@thesovereignsphere">YouTube channel</a>.</td></tr>
+      <tr><td class="d">Aug 19, 2026</td><td><a href="https://www.karlajoytreadway.com/podcasts/the-sovereign-sphere-with-karla-treadway/episodes/2149245200">Ep. 235, Reclaiming Your Humaneness</a><br><span class="small">Guest Mark Groves</span></td><td>Her decision to run for council (34:11) and her “Tucker Carlson moment” (50:03), in her own words.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Her side</h3>
+  <p>Treadway told the Miner &amp; News her views have been mischaracterized. Her stated position: residential schools should never have existed, the suffering was real, and Canadians should still be able to discuss history honestly. That article covers a different episode, with guest Tim Thielmann, not the Widdowson one. Asked about specific podcast statements in early October, she said she first needed to consult a legal professional. On Oct 15 she posted on X that people are “reacting to a character that's been created.”</p>
+</section>
+
+<section id="voices">
+  <div class="sh"><h2><span class="num">08</span>Voices</h2><button class="share" data-id="voices" type="button">Copy link</button></div>
+  <h3>Walk for peace, Oct 15</h3>
+  <p>On Oct 15, Natalie Skead and Raven Crow led dozens of people from Anicinabe Park to City Hall for Wiidosemididaa Ji-Ozhitooying Zhawenimidiwin, “Let's walk together in peace.” Skead, whose mother survived residential school, organized it as a peaceful response to residential school denialism.</p>
+  <p>Chiefs Jeff Copenace of Ojibways of Onigaming, Chris Skead of Wauzhushk Onigum Nation and Roland Fisher of Wabaseemoong Independent Nations walked alongside them, and Kenora Chiefs Advisory endorsed the event. The orange signs at the front came from the organizers. Some walkers also carried <a href="https://www.kenoraminerandnews.com/news/indigenous/rock-the-indigenous-vote-campaign-being-run-against-kenora-council-candidates/article_0d7730a5-2ce6-4dac-abd5-b0079fdccdce.html">Rock the Indigenous Vote</a> signs, but the walk itself wasn't aimed at any candidate. Candidate Tyler Johnson watched from across the street, taking photos.</p>
+  <p><b>Who spoke at City Hall.</b> Chief Copenace, Natalie Skead, Raven Crow's daughter and a Sixties Scoop survivor spoke about history, survivorship, intergenerational trauma, resilience and healing. Candidates Mort Goss and Richard Kurtz spoke about acting from the heart, community advocacy, kindness and allyship.</p>
+  <blockquote>“Things are improving, but we can't go backwards.”</blockquote>
+  <p class="who">Chief Jeff Copenace, Ojibways of Onigaming, at City Hall</p>
+  <p class="small">Speaker summary from people who walked. Report: <a href="https://www.kenoraminerandnews.com/news/indigenous/we-can-t-go-backwards-chiefs-lead-march-to-city-hall-against-denialism-and-controversial/article_b1a5bff8-8c4a-4bd4-a74d-121fc4f1fc6a.html">Bronson Carver, Miner &amp; News, Oct 16</a></p>
+  <h3>Grand Council Treaty #3</h3>
+  <blockquote>“Not up for debate in a political platform.”</blockquote>
+  <p class="who">Ogichidaa Francis Kavanaugh, Sept 16, on the dignity, rights and jurisdiction of the Anishinaabe Nation</p>
+  <p>Grand Council doesn't tell its citizens how to vote. The Ogichidaa asked everyone to get informed, vote, and remember the weight of the words we use as neighbours and treaty partners. <a href="https://gct3.ca/statement-from-ogichidaa-francis-kavanaugh-on-upcoming-municipal-elections/">Read the statement</a>.</p>
+  <h3>Rock the Indigenous Vote</h3>
+  <p>Tania Cameron of Niisaachewan Anishinaabe Nation registered with the City as a third-party advertiser to campaign against the three A New Vision candidates. “Since they decided to run as a bloc, I'm campaigning against the trio,” she told the Miner &amp; News. Her plan: radio ads using Treadway's own words, plus signs. She raised over $2,000 in 48 hours, opened a separate bank account as the rules require, and says she organizes it herself without coordinating with any candidate. She said what she heard on the podcasts was painful for a family whose members attended residential and day schools.</p>
+  <p class="small"><a href="https://www.facebook.com/share/183phTmucH/">Campaign page</a> · <a href="https://www.kenoraminerandnews.com/news/indigenous/rock-the-indigenous-vote-campaign-being-run-against-kenora-council-candidates/article_0d7730a5-2ce6-4dac-abd5-b0079fdccdce.html">Miner &amp; News story</a></p>
+  <h3>Elder Robert Williamson</h3>
+  <p>Wrote an open letter answering claims about crime in First Nations communities near Kenora, published with <a href="https://www.aptnnews.ca/national-news/kenora-council-candidates-facing-backlash-for-hateful-views-of-first-nations-people/">APTN's Sept 18 story</a>.</p>
+</section>
+
+<section id="civics">
+  <div class="sh"><h2><span class="num">09</span>Civics 101</h2><button class="share" data-id="civics" type="button">Copy link</button></div>
+  <p>Campaign promises are cheap. The law decides what a councillor can actually do. Here's the short version of the rules they'll be working under.</p>
+  <div class="law">
+    <article><span class="cite"><a href="https://www.ontario.ca/laws/statute/01m25">Municipal Act, 2001</a>, s. 224</span><b>What a councillor's job is</b><p>Represent the public, decide what services the City provides, develop policy, and make sure the City is accountable and transparent.</p><p class="so">So: “I'll fix crime” isn't a council power. Budgets, bylaws and services are.</p></article>
+    <article><span class="cite">Municipal Act, Part VI.1</span><b>Strong mayor powers</b><p>Kenora's mayor has held them <a href="https://www.kenora.ca/your-government/mayor-and-council/strong-mayor-powers/">since May 1, 2025</a>. The mayor proposes the budget, can veto some bylaws, hires the CAO, and can pass certain bylaws with one-third of council.</p><p class="so">So: a two-thirds council vote overrides a veto. That's five of seven. Who you elect still matters.</p></article>
+    <article><span class="cite">Municipal Accountability Act, 2025 (Bill 9)</span><b>New conduct rules</b><p><a href="https://hicksmorley.com/2026/06/03/ontarios-municipal-accountability-act-2025-receives-royal-assent/">Royal Assent June 2, 2026</a>. A single provincial code of conduct replaces local ones, the provincial Integrity Commissioner investigates serious misconduct, and there's a process to remove a councillor. Its main sections take effect on dates the province sets, not all at once.</p><p class="so">So: this council may be the first held to the new standard, depending on when it's switched on.</p></article>
+    <article><span class="cite">Municipal Elections Act, 1996</span><b>Third-party advertisers</b><p>Paid advertising that promotes or opposes candidates, run by someone other than a candidate, is “third-party advertising.” Those advertisers must register with the Clerk and follow donation and spending rules. Everyday unpaid political talk, like posting your opinion online, is a different thing.</p><p class="so">So: Rock the Indigenous Vote registered and plays by those rules. <a href="https://www.ontario.ca/laws/statute/96m32">Read the Act</a>.</p></article>
+    <article><span class="cite">Community Safety and Policing Act, 2019</span><b>Safety plans are the law</b><p>Ontario requires every municipality to have a Community Safety and Well-Being Plan built with health, social service and Indigenous partners. Kenora has one.</p><p class="so">So: “nobody's doing anything” usually means “I haven't read the plan.”</p></article>
+    <article><span class="cite"><a href="https://www.ontario.ca/laws/statute/90h19">Ontario Human Rights Code</a></span><b>Services are for everyone</b><p>The City can't deliver services or enforce bylaws in ways that discriminate, including against people because they're Indigenous, disabled or receiving public assistance.</p><p class="so">So: the OHRC has already warned Kenora once. See <a href="#questions">Ask them this</a>.</p></article>
+    <article><span class="cite">TRC Calls to Action 43, 47, 57, 75, 77</span><b>Municipalities are named</b><p>Adopt the UN Declaration on the Rights of Indigenous Peoples (43). Reject the Doctrine of Discovery (47). Train public servants in Indigenous history and treaties (57). Protect residential school cemeteries and burial sites (75). Share records with the National Centre for Truth and Reconciliation (77).</p><p class="so">So: reconciliation isn't a federal-only file. <a href="https://nctr.ca/about/truth-and-reconciliation-commission-of-canada/">Read the Calls</a>.</p></article>
+    <article><span class="cite">Municipal Conflict of Interest Act</span><b>Money conflicts</b><p>A councillor with a financial interest in a matter has to declare it and stay out of the discussion and the vote. Separately, the Code of Conduct covers behaviour. Anyone can complain to the Integrity Commissioner, who investigates and reports.</p><p class="so">So: disagreeing with a councillor, criticizing them, filing a complaint and having a complaint upheld are four different things.</p></article>
+  </div>
+  <h3>Four ways to read this election</h3>
+  <div class="lens">
+    <div><b>Like a political scientist</b><p>Seven votes, one bloc of three. Turnout in 2022 was <a href="https://www.lowdsa.com:443/articles/local-elections-bring-new-faces-to-area-councils-and-boards">54.6%</a>. Low turnout makes organized blocs more powerful.</p></div>
+    <div><b>Like an accountant</b><p>Every promise has a cost and a line in the budget. Ask which line, and what gets cut to pay for it.</p></div>
+    <div><b>Like a historian</b><p>Kenora sits on Treaty #3 land and was home to Cecilia Jeffrey Indian Residential School. The TRC's findings are the public record. Questioning a record isn't the same as having evidence against it.</p></div>
+    <div><b>Like a social worker</b><p>The City's policing study shows calls about mental health and wellness rising. Problems that are about health need health responses. That's the idea behind Ontario's community safety and well-being planning: prevention before policing.</p></div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="sh"><h2><span class="num">10</span>Timeline</h2><button class="share" data-id="timeline" type="button">Copy link</button></div>
+  <p class="small">Dates are when things happened. Where a story ran later, the publication date is noted.</p>
+  <ol class="tl">
+    <li><span class="d">May 1</span>Nominations open. Cecile Marcino files first.</li>
+    <li><span class="d">Jun 16</span>Mort Goss sworn in to council, replacing Barb Manson, who resigned in May.</li>
+    <li><span class="d">Jul 27</span>Treadway's podcast episode “Canada's Suicidal Empathy.”</li>
+    <li><span class="d">Aug 19</span>Bernie's letter to the editor, “Suicidal empathy is destroying our community.”</li>
+    <li><span class="d">Aug 21</span>Nominations close. Mayor acclaimed; 13 run for council.</li>
+    <li><span class="d">Aug 24</span>Candidates certified.</li>
+    <li><span class="d">Sep 6</span>On Facebook, Treadway names Johnson, McCaffrey and Bernie as sharing her vision.</li>
+    <li><span class="d">Sep 16</span>Grand Council Treaty #3 statement on the election. Residents' questions posted to all candidates.</li>
+    <li><span class="d">Sep 17–23</span>Coverage of candidate statements: Miner &amp; News (Sep 17, 21), APTN (Sep 18), NWOnewswatch (Sep 23).</li>
+    <li><span class="d">Oct 1</span>Rock the Indigenous Vote campaign reported.</li>
+    <li><span class="d">Oct 6</span>Chamber all-candidates forum. Bernie not in attendance.</li>
+    <li><span class="d">Oct 13</span>Voting opens.</li>
+    <li><span class="d">Oct 15</span>Walk for peace from Anicinabe Park to City Hall (reported Oct 16).</li>
+    <li><span class="d">Oct 26</span>Voting closes at 8 p.m.</li>
+  </ol>
+</section>
+
+<section id="coverage">
+  <div class="sh"><h2><span class="num">11</span>The news file</h2><button class="share" data-id="coverage" type="button">Copy link</button></div>
+  <p>Meta blocks news links in Canada, so many people in town never saw these on Facebook. Here they are. If a Miner &amp; News link won't open, try the reprint.</p>
+  <h3>The race</h3>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Date</th><th scope="col">Outlet</th><th scope="col">Story</th></tr></thead>
+    <tbody>
+      <tr><td class="d">May–Aug</td><td>Your Kenora</td><td>Candidates enter: <a href="https://yourkenora.ca/first-nomination-received-in-kenora-for-municipal-election/">Marcino files first</a> · <a href="https://yourkenora.ca/dan-reynard-running-for-council/">Reynard</a> · <a href="https://yourkenora.ca/another-person-in-the-running-for-kenora-city-council/">another in the running</a> · <a href="https://yourkenora.ca/third-person-enters-council-race/">Booth</a> · <a href="https://yourkenora.ca/malashewski-enters-kenora-council-race/">Malashewski</a> · <a href="https://yourkenora.ca/rod-mckay-enters-council-race/">McKay</a> · <a href="https://yourkenora.ca/six-people-running-for-kenora-city-council/">six running</a></td></tr>
+      <tr><td class="d">Jun 16</td><td>Your Kenora</td><td><a href="https://yourkenora.ca/goss-appointed-to-city-council-to-replace-barb-manson/">Goss appointed to city council to replace Barb Manson</a></td></tr>
+      <tr><td class="d">Aug 6</td><td>Kenora Chamber</td><td><a href="https://kenorachamber.com/2026/08/06/kdcc-director-enters-municipal-election-race/">KDCC director enters municipal election race</a></td></tr>
+      <tr><td class="d">Aug 21</td><td>NWOnewswatch</td><td><a href="https://www.nwonewswatch.com/local-journalism-initiative-lji/the-field-is-set-and-kenora-has-only-one-candidate-for-mayor-12693729">The field is set and Kenora has only one candidate for mayor</a></td></tr>
+      <tr><td class="d">Aug 24</td><td>City of Kenora</td><td><a href="https://www.kenora.ca/news-and-notices/posts/notice-of-2026-list-of-certified-candidates/">Notice of certified candidates</a></td></tr>
+      <tr><td class="d">2026</td><td>NWOnewswatch</td><td><a href="https://www.nwonewswatch.com/local-news/negativity-job-demands-likely-deterring-candidates-kenora-councillor-12700556">Negativity, job demands likely deterring candidates: Kenora councillor</a></td></tr>
+      <tr><td class="d">Sep 17</td><td>Your Kenora</td><td><a href="https://yourkenora.ca/this-edition-of-kenora-city-council-holds-final-meeting/">This edition of Kenora city council holds final meeting</a></td></tr>
+      <tr><td class="d">Oct 7</td><td>Kenora Chamber</td><td><a href="https://kenorachamber.com/2026/10/07/kenora-chamber-hosts-2026-all-candidates-forum/">Kenora Chamber hosts 2026 all candidates forum</a></td></tr>
+      <tr><td class="d">Oct 13</td><td>101.3 The Gap · Your Kenora</td><td><a href="https://1013thegap.ca/2026/10/13/kenora-votes-on-october-26th-who-can-vote/">Who can vote?</a> · <a href="https://yourkenora.ca/kenora-municipal-vote-begins-today/">Kenora municipal vote begins today</a></td></tr>
+      <tr><td class="d">Oct 13</td><td>Miner &amp; News (Mark LaBelle)</td><td><a href="https://www.kenoraminerandnews.com/opinion/column/the-new-guy-get-out-and-vote/article_37c59ead-b6f2-4520-b86f-c568e1ef0138.html">The New Guy: Get out and vote!</a></td></tr>
+      <tr><td class="d">Oct</td><td>Miner &amp; News (Lindsay Koch)</td><td><a href="https://www.kenoraminerandnews.com/opinion/koch-beyond-the-noise-how-to-vote-with-intention-in-the-upcoming-election/article_b4df4fa3-4413-4389-bd75-7d2283ee69f9.html">Beyond the noise: how to vote with intention</a></td></tr>
+    </tbody>
+  </table></div>
+  <h3>Statements, scrutiny and response</h3>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Date</th><th scope="col">Outlet</th><th scope="col">Story</th></tr></thead>
+    <tbody>
+      <tr><td class="d">Aug 19</td><td>Miner &amp; News (letter)</td><td><a href="https://www.kenoraminerandnews.com/opinion/letters/letter-to-the-editor-suicidal-empathy-is-destroying-our-community/article_bf25ef0e-711d-45da-9bf7-045331800031.html">Letter to the editor: Suicidal empathy is destroying our community</a> (Bob Bernie)</td></tr>
+      <tr><td class="d">Sep 17</td><td>Miner &amp; News (Pam Fedack)</td><td><a href="https://yourkenora.ca/controversial-comments-dominating-municipal-election-discourse/">Controversial comments dominating municipal election discourse</a> (via Your Kenora)</td></tr>
+      <tr><td class="d">Sep 18</td><td>APTN News</td><td><a href="https://www.aptnnews.ca/national-news/kenora-council-candidates-facing-backlash-for-hateful-views-of-first-nations-people/">Kenora council candidates facing backlash for “hateful” views of First Nations people</a></td></tr>
+      <tr><td class="d">Sep 21</td><td>Miner &amp; News (Pam Fedack)</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/treadway-clarifies-views-on-residential-schools-reconciliation/article_7d83b389-eb80-4744-a764-f782ce979b53.html">Treadway clarifies views on residential schools, reconciliation</a> (also <a href="https://theturtleislandnews.com/index.php/2026/09/25/treadway-clarifies-views-on-residential-schools-reconciliation/">Turtle Island News</a>)</td></tr>
+      <tr><td class="d">Sep 21</td><td>Miner &amp; News (Pam Fedack)</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/voting-bloc-can-function-with-own-individual-ideas-member-says/article_b5c0141b-99b1-4026-bbd1-acbd6d40d4e6.html">Voting bloc can function with own individual ideas, member says</a>. Johnson says the three share one goal, downtown, but “how we do it, we have our own individual ideas.” He declined to take a position on Anicinabe Park, citing his work as a lawyer. McCaffrey didn't respond.</td></tr>
+      <tr><td class="d">Sep 23</td><td>NWOnewswatch (Maya Ekman)</td><td><a href="https://www.nwonewswatch.com/local-journalism-initiative-lji/kenora-council-candidate-faces-backlash-over-comments-about-indigenous-communities-12792742">Kenora council candidate faces backlash over comments about Indigenous communities</a> (also <a href="https://fftimes.com/news/district-news/kenora-council-candidate-faces-backlash-over-comments-about-indigenous-communities/">Fort Frances Times</a>)</td></tr>
+      <tr><td class="d">Sep</td><td>Miner &amp; News (Pam Fedack)</td><td>“Discomfort shouldn't make topics off limits: candidate.” Also in the Winnipeg Sun.</td></tr>
+      <tr><td class="d">Sep–Oct</td><td>Miner &amp; News (opinion)</td><td><a href="https://www.kenoraminerandnews.com/opinion/opinion-an-open-letter-to-karla-treadway/article_0f6589da-66e8-419b-a5b7-2532aab94bd4.html">An open letter to Karla Treadway</a></td></tr>
+      <tr><td class="d">Oct</td><td>Miner &amp; News (Pam Fedack)</td><td><a href="https://www.kenoraminerandnews.com/news/indigenous/rock-the-indigenous-vote-campaign-being-run-against-kenora-council-candidates/article_0d7730a5-2ce6-4dac-abd5-b0079fdccdce.html">“Rock the Indigenous Vote” campaign being run against Kenora council candidates</a> (also <a href="https://theturtleislandnews.com/index.php/2026/10/01/rock-the-indigenous-vote-campaign-being-run-against-kenora-council-candidates/">Turtle Island News</a>, <a href="https://fftimes.com/news/district-news/rock-the-indigenous-vote-campaign-being-run-against-kenora-council-candidates/">Fort Frances Times</a>)</td></tr>
+      <tr><td class="d">Oct</td><td>Miner &amp; News (Pam Fedack)</td><td><a href="https://www.kenoraminerandnews.com/news/local-news/residents-question-candidate-s-statements-ahead-of-election/article_01d044e5-f782-4b42-b458-b65486b9aa54.html">Residents question candidate's statements ahead of election</a> (also <a href="https://www.mbcradio.com/2026/10/residents-question-candidates-statements-ahead-of-election">MBC Radio</a>, <a href="https://theturtleislandnews.com/index.php/2026/10/07/residents-question-candidates-statements-ahead-of-election/">Turtle Island News</a>)</td></tr>
+      <tr><td class="d">Oct 16</td><td>Miner &amp; News (Bronson Carver)</td><td><a href="https://www.kenoraminerandnews.com/news/indigenous/we-can-t-go-backwards-chiefs-lead-march-to-city-hall-against-denialism-and-controversial/article_b1a5bff8-8c4a-4bd4-a74d-121fc4f1fc6a.html">“We can't go backwards”: Chiefs lead march to City Hall against denialism and controversial triumvirate</a></td></tr>
+      <tr><td class="d">Oct</td><td>Instagram</td><td><a href="https://www.instagram.com/reel/DdjYZo9qsWA/">Five-part video commentary</a> by @sierraaudet and @decolonizemyself, part 1. More on their accounts.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="support">
+  <div class="sh"><h2><span class="num">12</span>Take care of yourself</h2><button class="share" data-id="support" type="button">Copy link</button></div>
+  <p>Hearing the truth about residential schools questioned during an election is hard, especially for survivors and their families. You don't have to sit with it alone.</p>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Line</th><th scope="col">For</th><th scope="col">Number</th></tr></thead>
+    <tbody>
+      <tr><td>Indian Residential Schools Crisis Line</td><td>Survivors and families, 24 hours</td><td class="d"><a href="tel:+18669254419">1-866-925-4419</a></td></tr>
+      <tr><td>Hope for Wellness Help Line</td><td>Indigenous peoples, 24 hours, chat available</td><td class="d"><a href="tel:+18552423310">1-855-242-3310</a></td></tr>
+      <tr><td>Suicide Crisis Helpline</td><td>Anyone, 24 hours, call or text</td><td class="d"><a href="tel:988">9-8-8</a></td></tr>
+    </tbody>
+  </table></div>
+  <p>In Kenora, Ne-Chee Friendship Centre, Waasegiizhig Nanaandawe'iyewigamig and Kenora Chiefs Advisory all offer support.</p>
+</section>
+
+<section id="about">
+  <div class="sh"><h2><span class="num">13</span>How we did this</h2><button class="share" data-id="about" type="button">Copy link</button></div>
+  <ul class="plain">
+    <li><b>Sources.</b> Official City records, Integrity Commissioner reports, legislation, candidates' own profiles, letters, questionnaire answers and podcasts, and published reporting. Where several outlets ran the same story, we list the original and note the reprints. A reprint isn't a second source.</li>
+    <li><b>Quotes.</b> Quotation marks mean we checked the wording against the original document, recording transcript or article. Everything else is a summary, and the link is there so you can check it.</li>
+    <li><b>Allegations and findings.</b> We say who complained, what was investigated, what the investigator found, and what council did after. A complaint is never presented as proof.</li>
+    <li><b>Privacy.</b> Private residents aren't named unless they're public figures in this story. Names in screenshots are blurred.</li>
+    <li><b>Indigenous voices.</b> We quote Indigenous leaders and organizers in their own words and link their statements. Nobody here speaks for them.</li>
+    <li><b>Corrections.</b> If we got something wrong, tell us and we'll fix it and note the change.</li>
+  </ul>
+</section>
+</div>
+</main>
+
+<footer class="gut">
+  <div class="wrap">
+    <span>Made by Kenora residents from public sources. Every council candidate was invited to answer the same questions. Last updated Oct 22, 2026.</span>
+    <span><span class="stamp">Sourced</span></span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+  var BASE=(/^https?:$/.test(location.protocol)&&!/claude\.ai|claudeusercontent/.test(location.hostname))?location.origin+location.pathname:'https://claude.ai/artifact/8w9PGSBkoxSFy2dGxXCRAu';
+  // after polls close, the badge says so; before, it shows the fixed deadline
+  try{
+    if(new Date()>new Date('2026-10-26T20:00:00-05:00')){
+      document.getElementById('days').textContent='Voting closed';
+      document.getElementById('dayslabel').textContent='8 p.m., Monday, Oct 26';
+    }
+  }catch(e){}
+  // share buttons
+  var toast=document.getElementById('toast'),t;
+  function say(m){toast.textContent=m;toast.hidden=false;clearTimeout(t);t=setTimeout(function(){toast.hidden=true},2200)}
+  document.querySelectorAll('.share').forEach(function(b){
+    b.addEventListener('click',function(){
+      var url=BASE+'#'+b.dataset.id;
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(function(){say('Link copied. Paste it into Facebook.')},function(){say(url)});
+      }else{say(url)}
+    });
+  });
+  // search + active chip
+  var q=document.getElementById('q'), secs=[].slice.call(document.querySelectorAll('main section')),
+      links=[].slice.call(document.querySelectorAll('#toc a')), none=document.getElementById('noresults');
+  q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), shown=0;
+    secs.forEach(function(s){var hit=!v||s.textContent.toLowerCase().indexOf(v)>-1;s.hidden=!hit;var a=document.querySelector('#toc a[href="#'+s.id+'"]');if(a)a.hidden=!hit;if(hit)shown++;});
+    none.hidden=shown>0;
+  });
+  function mark(id){links.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('on',on);if(on){a.setAttribute('aria-current','true');var w=a.parentNode;if(w.scrollWidth>w.clientWidth)w.scrollLeft=a.offsetLeft-40}else a.removeAttribute('aria-current')})}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)mark(e.target.id)})},{rootMargin:'-80px 0px -70% 0px'});
+    secs.forEach(function(s){io.observe(s)});
+  }
+  var h=location.hash.slice(1); if(h&&document.getElementById(h)){document.getElementById(h).scrollIntoView();mark(h)}
+})();
+</script>
+
+</body>
+</html>
